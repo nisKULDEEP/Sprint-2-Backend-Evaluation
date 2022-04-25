@@ -1,6 +1,10 @@
 const mongoose = require("mongoose");
 
 const userSchema = new mongoose.Schema({
+  accId: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "masterAccount",
+  },
   firstName: {
     type: String,
     require: [true, "Please tell your First Name"],
